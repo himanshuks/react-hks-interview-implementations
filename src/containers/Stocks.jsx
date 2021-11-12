@@ -1,4 +1,9 @@
+import { useState } from "react";
+
 export const Stocks = () => {
+  const [buyOrder, setBuyOrder] = useState([]);
+  const [sellOrder, setSellOrder] = useState([]);
+
   return (
     <div>
       <h2>Welcome to Stocks</h2>
