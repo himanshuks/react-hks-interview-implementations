@@ -1,8 +1,17 @@
 import { useState } from "react";
+import { v4 as uid } from "uuid";
 
 export const Stocks = () => {
   const [buyOrder, setBuyOrder] = useState([]);
   const [sellOrder, setSellOrder] = useState([]);
+
+  const priceOrg = 37000 + Math.random() * 20000;
+
+  const stock = {
+    id: uid(),
+    size: Math.round(Math.random() * 10000) / 10000,
+    price: Math.round(priceOrg * 100) / 100,
+  };
 
   return (
     <div>
