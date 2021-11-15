@@ -13,6 +13,16 @@ export const Stocks = () => {
     price: Math.round(priceOrg * 100) / 100,
   };
 
+  const handleBuy = () => {
+    console.log("buy clicked");
+    setBuyOrder([...buyOrder, stock]);
+  };
+
+  const handleSell = () => {
+    console.log("sell clicked");
+    setSellOrder([...sellOrder, stock]);
+  };
+
   return (
     <div>
       <h2>Welcome to Stocks</h2>
