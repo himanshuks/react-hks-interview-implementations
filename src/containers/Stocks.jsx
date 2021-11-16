@@ -46,9 +46,21 @@ export const Stocks = () => {
             color: "white",
             border: "none",
           }}
+          onClick={handleSell}
         >
           Sell
         </button>
+      </div>
+      <h3>Table of Order Placed</h3>
+      <div>
+        <table>
+          {sellOrder.map((x) => (
+            <tr key={x.id}>
+              <td>{x.size}</td>
+              <td style={{ color: "red" }}>{x.price}</td>
+            </tr>
+          ))}
+        </table>
       </div>
     </div>
   );
