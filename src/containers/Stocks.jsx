@@ -35,6 +35,7 @@ export const Stocks = () => {
             color: "white",
             border: "none",
           }}
+          onClick={handleBuy}
         >
           Buy
         </button>
@@ -58,6 +59,12 @@ export const Stocks = () => {
             <tr key={x.id}>
               <td>{x.size}</td>
               <td style={{ color: "red" }}>{x.price}</td>
+            </tr>
+          ))}
+          {buyOrder.map((x) => (
+            <tr key={x.id}>
+              <td>{x.size}</td>
+              <td style={{ color: "green" }}>{x.price}</td>
             </tr>
           ))}
         </table>
