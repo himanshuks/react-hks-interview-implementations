@@ -14,12 +14,12 @@ export const Stocks = () => {
   };
 
   const handleBuy = () => {
-    console.log("buy clicked");
+    console.log("buy BUTTON clicked");
     setBuyOrder([...buyOrder, stock]);
   };
 
   const handleSell = () => {
-    console.log("sell clicked");
+    console.log("sell BUTTON clicked");
     setSellOrder([...sellOrder, stock]);
   };
 
@@ -36,6 +36,12 @@ export const Stocks = () => {
             border: "none",
           }}
           onClick={handleBuy}
+
+          // Below will cause infinite loop
+          // onClick={setBuyOrder([...buyOrder, stock])}
+
+          // Use function for setting variable value
+          // onClick={() => setBuyOrder([...buyOrder, stock])}
         >
           Buy
         </button>
@@ -55,18 +61,20 @@ export const Stocks = () => {
       <h3>Table of Order Placed</h3>
       <div>
         <table>
-          {sellOrder.map((x) => (
-            <tr key={x.id}>
-              <td>{x.size}</td>
-              <td style={{ color: "red" }}>{x.price}</td>
-            </tr>
-          ))}
-          {buyOrder.map((x) => (
-            <tr key={x.id}>
-              <td>{x.size}</td>
-              <td style={{ color: "green" }}>{x.price}</td>
-            </tr>
-          ))}
+          <tbody>
+            {sellOrder.map((x) => (
+              <tr key={x.id}>
+                <td>{x.size}</td>
+                <td style={{ color: "red" }}>{x.price}</td>
+              </tr>
+            ))}
+            {buyOrder.map((x) => (
+              <tr key={x.id}>
+                <td>{x.size}</td>
+                <td style={{ color: "green" }}>{x.price}</td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     </div>
