@@ -17,6 +17,14 @@ export const Asteroids = () => {
               <th>MAGNITUDE</th>
               <th>JPL URL</th>
             </tr>
+            {asteroidsList.map((obj) => (
+              <tr key={obj.id}>
+                <td>{obj.neo_reference_id}</td>
+                <td>{obj.name}</td>
+                <td>{obj.absolute_magnitude_h}</td>
+                <td>{obj.nasa_jpl_url}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
