@@ -1,12 +1,24 @@
+import axios from "axios";
 import { useState } from "react";
 
 export const Asteroids = () => {
   const [asteroidsList, setAsteroids] = useState([]);
 
+  const getAsteroids = () => {
+    axios
+      .get("https://api.nasa.gov/neo/rest/v1/neo/browse", {
+        params: { api_key: "" },
+      })
+      .then((res) => {
+        console.log(`res`, res.data.near_earth_objects);
+        setAsteroids(res.data.near_earth_objects);
+      });
+  };
+
   return (
     <div>
       <h2>Asteroid Page</h2>
-      <button>Click Me</button>
+      <button onClick={getAsteroids}>Click Me</button>
       <div>
         <h3>List of Asteroids Moving</h3>
         <table>
