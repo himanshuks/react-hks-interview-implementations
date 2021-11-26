@@ -1,4 +1,11 @@
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
 export const Basket = () => {
+  const [totalPrice, setTotalPrice] = useState(0);
+  const storeData = useSelector((x) => x.products);
+  const dispatch = useDispatch();
+
   function getSampleProduct() {
     console.log("product created");
     return {
