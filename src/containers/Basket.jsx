@@ -8,6 +8,15 @@ export const Basket = () => {
   const storeData = useSelector((x) => x.products);
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    console.log("useEffect called");
+    let tp = 0;
+    for (const obj of storeData) {
+      tp += obj.quantity * obj.price;
+    }
+    setTotalPrice(tp);
+  }, [storeData]);
+
   function getSampleProduct() {
     console.log("product created");
     return {
