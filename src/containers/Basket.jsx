@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { addProductToBasket } from "../redux/basket/action";
+import {
+  addProductToBasket,
+  removeProductFromBasket,
+} from "../redux/basket/action";
 
 export const Basket = () => {
   const [totalPrice, setTotalPrice] = useState(0);
@@ -34,6 +37,11 @@ export const Basket = () => {
         Add product to basket
       </button>
     );
+  }
+
+  function onRemove(id) {
+    console.log("remove DISPATCH called");
+    dispatch(removeProductFromBasket(id));
   }
 
   return (
