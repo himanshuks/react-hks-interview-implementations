@@ -46,7 +46,12 @@ export const Basket = () => {
 
   return (
     <div>
-      <h2>Basket Component</h2>
+      <div>
+        <h2>Basket Component</h2>
+      </div>
+      <div>
+        Total price: <span id="total-price">{totalPrice}</span>
+      </div>
     </div>
   );
 };
