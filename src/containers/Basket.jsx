@@ -52,6 +52,20 @@ export const Basket = () => {
       <div>
         Total price: <span id="total-price">{totalPrice}</span>
       </div>
+      <div>
+        <h3>List of Basket Items</h3>
+        <table>
+          <tbody>
+            <tr>
+              <th>Name</th>
+              <th>Qty</th>
+              <th>Price</th>
+              <th>Total</th>
+              <th>Remove</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
