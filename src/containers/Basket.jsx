@@ -63,6 +63,14 @@ export const Basket = () => {
               <th>Total</th>
               <th>Remove</th>
             </tr>
+            {storeData.map((obj) => (
+              <tr>
+                <td>{obj.name}</td>
+                <td>{obj.quantity}</td>
+                <td>{obj.price}</td>
+                <td>{obj.quantity * obj.price}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
