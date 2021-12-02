@@ -69,6 +69,15 @@ export const Basket = () => {
                 <td>{obj.quantity}</td>
                 <td>{obj.price}</td>
                 <td>{obj.quantity * obj.price}</td>
+                <td>
+                  <button
+                    // onClick={() => dispatch(removeProductFromBasket(obj.id))}
+                    id={`remove-${obj.id}`}
+                    onClick={() => onRemove(obj.id)}
+                  >
+                    X
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>
