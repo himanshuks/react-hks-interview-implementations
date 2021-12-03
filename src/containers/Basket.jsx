@@ -48,6 +48,7 @@ export const Basket = () => {
     <div>
       <div>
         <h2>Basket Component</h2>
+        <AddProductComponent />
       </div>
       <div>
         Total price: <span id="total-price">{totalPrice}</span>
