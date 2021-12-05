@@ -5,3 +5,11 @@ export function addProductToBasket(product) {
     type: "ADD_PRODUCT_TO_BASKET",
   };
 }
+
+export function removeProductFromBasket(productId) {
+  console.log("remove ACTION called...data received ---> ", productId);
+  return {
+    payload: productId,
+    type: "REMOVE_PRODUCT_FROM_BASKET",
+  };
+}
