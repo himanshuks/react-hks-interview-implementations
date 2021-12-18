@@ -5,6 +5,9 @@ export const NavbarMenu = () => {
   return (
     <div>
       <Navbar>
+        <Nav.Link as={Link} to="/">
+          Home
+        </Nav.Link>
         <Nav.Link as={Link} to="/stocks">
           Stocks
         </Nav.Link>
