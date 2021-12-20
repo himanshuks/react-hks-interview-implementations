@@ -8,6 +8,9 @@ export const NavbarMenu = () => {
         <Nav.Link as={Link} to="/">
           Home
         </Nav.Link>
+        <Nav.Link as={Link} to="/baskets">
+          Baskets
+        </Nav.Link>
         <Nav.Link as={Link} to="/stocks">
           Stocks
         </Nav.Link>
