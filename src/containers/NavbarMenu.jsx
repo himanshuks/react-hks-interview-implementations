@@ -8,18 +8,20 @@ export const NavbarMenu = () => {
   return (
     <div>
       <Navbar bg="dark" variant="dark">
-        <Nav.Link as={Link} to="/">
-          Home
-        </Nav.Link>
-        <Nav.Link as={Link} to="/asteroids">
-          Asteroids
-        </Nav.Link>
-        <Nav.Link as={Link} to="/baskets">
-          Baskets
-        </Nav.Link>
-        <Nav.Link as={Link} to="/stocks">
-          Stocks
-        </Nav.Link>
+        <Nav>
+          <Nav.Link as={Link} to="/">
+            Home
+          </Nav.Link>
+          <Nav.Link as={Link} to="/asteroids">
+            Asteroids
+          </Nav.Link>
+          <Nav.Link as={Link} to="/baskets">
+            Baskets
+          </Nav.Link>
+          <Nav.Link as={Link} to="/stocks">
+            Stocks
+          </Nav.Link>
+        </Nav>
       </Navbar>
     </div>
   );
