@@ -1,3 +1,8 @@
+// Below program adds Stock exchange prices to be displayed in table
+// Two actions - Buy and Sell of Stock
+// Buy Action - creates a buy order to be displayed in green
+// Sell Action - creates a sell order to be displayed in red
+
 import { useState } from "react";
 import { v4 as uid } from "uuid";
 
