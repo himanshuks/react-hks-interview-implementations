@@ -1,3 +1,8 @@
+// Below program adds product into basket to be displayed in table
+// Two actions - Add and Remove product
+// Add Button - creates a new product and appends in state list
+// Remove Action - removes particular product from state list
+
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
