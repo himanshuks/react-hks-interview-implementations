@@ -1,3 +1,7 @@
+// Below program hits API of NASA and provides Asteroids data
+// API key - mandatory and placed in ENV file
+// Click Button - displays asteroids data in tabular format
+
 import axios from "axios";
 import { useState } from "react";
 
